@@ -5,7 +5,7 @@ layout: layouts/base.njk
 {%- css %}{% include "public/css/message-box.css" %}{% endcss %}
 <div class="message-box">
 	<ol>
-		<li>Edit <code>_data/metadata.js</code> with your blog’s information.</li>
+		<li>Edit <code>_data/metadata.js</code> with your blog's information.</li>
 		<li>(Optional) Edit <code>eleventy.config.js</code> with your <a href="https://www.11ty.dev/docs/config/">configuration preferences</a>.</li>
 		<li>Delete this message from <code>_includes/layouts/home.njk</code>.</li>
 	</ol>
@@ -13,4 +13,30 @@ layout: layouts/base.njk
 </div>
 <!-- Stop deleting -->
 
-{{ content | safe }}
+<main class="site__main">
+	<section class="hero">
+		<div class="hero__content">
+			<h1 class="hero__heading">
+				Juggling creativity and pragmatism, I help multi-disciplinary teams to design & build excellent services and experiences.
+			</h1>
+		</div>
+		<img src="/img/avatar.svg" alt="" class="hero__image">
+	</section>
+
+	<section class="updates">
+		<h2 class="updates__heading">
+			<svg class="updates__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+				<path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+			</svg>
+			Updates
+		</h2>
+		
+		{% set postslist = collections.posts | head(-1) %}
+		{% for post in postslist %}
+		<div class="updates__item">
+			<div class="updates__date">{{ post.date | readableDate }}</div>
+			<a href="{{ post.url }}" class="updates__link">{{ post.data.title }}</a>
+		</div>
+		{% endfor %}
+	</section>
+</main>
