@@ -1,14 +1,67 @@
 /* Defaults */
 :root {
-	--font-family: 'Noto Sans', -apple-system, system-ui, sans-serif;
-	--font-family-heading: 'Playfair Display', serif;
-	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
-	
-	/* Add font size variables */
-	--text-4xl: 2.25rem;
-	--text-3xl: 1.875rem;
-	--text-2xl: 1.5rem;
+	/* Typography Scale */
+	--text-xs: 0.75rem;
+	--text-sm: 0.875rem;
+	--text-base: 1rem;
 	--text-lg: 1.125rem;
+	--text-xl: 1.25rem;
+	--text-2xl: 1.5rem;
+	--text-3xl: 1.875rem;
+	--text-4xl: 2.25rem;
+	--text-5xl: 3rem;
+	--text-6xl: 5rem;
+
+	/* Spacing Scale */
+	--space-unit: 1rem;
+	--space-xxs: calc(0.25 * var(--space-unit));
+	--space-xs: calc(0.5 * var(--space-unit));
+	--space-sm: calc(0.75 * var(--space-unit));
+	--space-md: calc(1.25 * var(--space-unit));
+	--space-lg: calc(2 * var(--space-unit));
+	--space-xl: calc(3.25 * var(--space-unit));
+	--space-xxl: calc(5.25 * var(--space-unit));
+
+	/* Colors */
+	--color-black: #000036;
+	--color-white: #ffffff;
+	--color-gray-10: #2e2e31;
+	--color-gray-6: #7b7a7d;
+	--color-gray-4: #a5a5a6;
+	--color-gray-3: #bbbbbc;
+	--color-gray-2: #d1d0d2;
+	--color-gray-1: #e8e7e8;
+	--color-accent: rgb(9, 121, 250);
+
+	/* Theme colors */
+	--background-color: var(--color-white);
+	--text-color: var(--color-black);
+	--border-color: var(--color-black);
+	--text-color-link: var(--color-black);
+	--text-color-link-active: var(--color-accent);
+	--text-color-link-visited: var(--color-black);
+	
+	/* Component colors */
+	--header-bg: var(--color-black);
+	--header-text: var(--color-white);
+	--footer-bg: var(--color-black);
+	--footer-text: var(--color-white);
+	
+	/* Form elements */
+	--form-border: var(--color-black);
+	--form-bg: var(--color-white);
+	--form-border-focus: var(--color-gray-10);
+	--form-placeholder: var(--color-gray-4);
+	
+	/* Buttons */
+	--btn-primary-bg: var(--color-black);
+	--btn-primary-hover: var(--color-gray-10);
+	--btn-primary-text: var(--color-white);
+
+	/* Breakpoints */
+	--phone-width: 64em;
+	--tablet-width: 64em;
+	--desktop-width: 80em;
 }
 
 /* Theme colors */
@@ -343,5 +396,53 @@ h3 {
 
 h4 {
 	font-size: var(--text-lg);
+}
+
+/* Media Queries */
+@media screen and (max-width: 64em) {
+	/* Phone styles */
+}
+
+@media screen and (min-width: 64em) and (max-width: 79.937em) {
+	/* Tablet styles */
+}
+
+@media screen and (min-width: 80em) {
+	/* Desktop styles */
+}
+
+/* Update existing dark mode theme */
+@media (prefers-color-scheme: dark) {
+	:root {
+		--background-color: var(--color-black);
+		--text-color: var(--color-white);
+		--border-color: var(--color-white);
+		--text-color-link: var(--color-white);
+		--text-color-link-active: var(--color-accent);
+		--text-color-link-visited: var(--color-gray-3);
+		
+		--header-bg: var(--color-gray-10);
+		--footer-bg: var(--color-gray-10);
+		
+		--form-border: var(--color-white);
+		--form-bg: var(--color-black);
+		--form-border-focus: var(--color-gray-3);
+		--form-placeholder: var(--color-gray-6);
+	}
+}
+
+/* Update header styles */
+header {
+	background-color: var(--header-bg);
+	color: var(--header-text);
+	padding: var(--space-md);
+	border-bottom: 1px solid var(--border-color);
+}
+
+/* Update footer styles */
+footer {
+	background-color: var(--footer-bg);
+	color: var(--footer-text);
+	padding: var(--space-lg);
 }
 
