@@ -446,3 +446,124 @@ footer {
 	padding: var(--space-lg);
 }
 
+/* Homepage Styles */
+.homepage {
+  padding-top: var(--space-lg);
+}
+
+.homepage h1 {
+  font-weight: 400;
+  font-size: var(--text-4xl);
+  max-width: calc(var(--space-xxl) * 20);
+}
+
+.homepage h2 {
+  margin-top: 22px;
+  font-weight: 400;
+  font-size: calc(var(--text-5xl) + 0.5rem);
+  max-width: calc(var(--space-xxl) * 9);
+  line-height: 76px;
+}
+
+.homepage h2 strong {
+  font-weight: 700;
+}
+
+.homepage img {
+  max-width: 20rem;
+}
+
+.homepage__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 1;
+}
+
+.homepage__more-about {
+  margin-top: 44px;
+  font-size: var(--text-2xl);
+}
+
+.homepage__more-about a {
+  color: inherit;
+}
+
+.homepage__post-list {
+  padding-left: 2.5rem;
+}
+
+.homepage__post-list-heading {
+  text-transform: uppercase;
+  font-family: var(--font-family);
+  font-weight: 700;
+  font-size: calc(var(--text-xl) + 0.2rem);
+  display: flex;
+  align-items: center;
+  margin-top: var(--space-xl);
+}
+
+.homepage__post-list-icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: flex;
+  margin-right: var(--space-sm);
+}
+
+.homepage__post-list-icon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.homepage__pagination {
+  display: flex;
+  font-weight: 400;
+  padding-bottom: var(--space-xl);
+}
+
+.homepage__pagination-link {
+  margin-left: auto;
+  display: inline-block;
+  text-transform: uppercase;
+  transition: color 0.3s ease-out;
+  color: inherit;
+}
+
+.homepage__pagination-link:hover {
+  color: var(--color-accent);
+}
+
+.homepage hr {
+  margin-top: var(--space-lg);
+}
+
+/* Media Queries */
+@media screen and (max-width: 64em) {
+  .homepage h1 {
+    font-size: var(--text-lg);
+  }
+
+  .homepage h2 {
+    font-size: var(--text-3xl);
+    line-height: 38px;
+  }
+
+  .homepage img {
+    max-width: 60%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: var(--space-lg);
+  }
+
+  .homepage__wrapper {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .homepage__more-about {
+    font-size: var(--text-xl);
+  }
+}
+
