@@ -1,7 +1,14 @@
 /* Defaults */
 :root {
-	--font-family: -apple-system, system-ui, sans-serif;
+	--font-family: 'Noto Sans', -apple-system, system-ui, sans-serif;
+	--font-family-heading: 'Playfair Display', serif;
 	--font-family-monospace: Consolas, Menlo, Monaco, Andale Mono WT, Andale Mono, Lucida Console, Lucida Sans Typewriter, DejaVu Sans Mono, Bitstream Vera Sans Mono, Liberation Mono, Nimbus Mono L, Courier New, Courier, monospace;
+	
+	/* Add font size variables */
+	--text-4xl: 2.25rem;
+	--text-3xl: 1.875rem;
+	--text-2xl: 1.5rem;
+	--text-lg: 1.125rem;
 }
 
 /* Theme colors */
@@ -52,6 +59,7 @@ body {
 	font-family: var(--font-family);
 	color: var(--text-color);
 	background-color: var(--background-color);
+	line-height: 1.6rem;
 }
 html {
 	overflow-y: scroll;
@@ -275,5 +283,65 @@ header {
 }
 .post-metadata time {
 	margin-right: 1em;
+}
+
+/* Font faces */
+@font-face {
+	font-family: 'Noto Sans';
+	src: local('Noto Sans'), 
+		url('/fonts/notosans-regular-webfont.woff2') format('woff2'),
+		url('/fonts/notosans-regular-webfont.woff') format('woff');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Noto Sans';
+	src: local('Noto Sans Black'),
+		url('/fonts/notosans-black-webfont.woff2') format('woff2'),
+		url('/fonts/notosans-black-webfont.woff') format('woff');
+	font-style: normal;
+	font-weight: 900;
+}
+
+@font-face {
+	font-family: 'Playfair Display';
+	src: local('Playfair Display'),
+		url('/fonts/playfairdisplay-regular-webfont.woff2') format('woff2'),
+		url('/fonts/playfairdisplay-regular-webfont.woff') format('woff');
+	font-style: normal;
+	font-weight: 400;
+}
+
+@font-face {
+	font-family: 'Playfair Display';
+	src: local('Playfair Display Bold'),
+		url('/fonts/playfairdisplay-bold-webfont.woff2') format('woff2'),
+		url('/fonts/playfairdisplay-bold-webfont.woff') format('woff');
+	font-style: normal;
+	font-weight: 700;
+}
+
+/* Typography updates */
+h1,
+h2,
+h3 {
+	font-family: var(--font-family-heading);
+}
+
+h1 {
+	font-size: var(--text-4xl);
+}
+
+h2 {
+	font-size: var(--text-3xl);
+}
+
+h3 {
+	font-size: var(--text-2xl);
+}
+
+h4 {
+	font-size: var(--text-lg);
 }
 

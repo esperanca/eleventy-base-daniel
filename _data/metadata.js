@@ -1,11 +1,11 @@
 export default {
-	title: "Eleventy Base Blog v9",
-	url: "https://example.com/",
-	language: "en",
-	description: "I am writing about my experiences as a naval navel-gazer.",
+	title: "Daniel Souza",
+	url: "https://danielsouza.com/",
+	language: "pt-br",
+	description: "Site oficial de Daniel Vieira Souza, designer e pesquisador brasileiro",
 	author: {
-		name: "Your Name Here",
-		email: "youremailaddress@example.com",
-		url: "https://example.com/about-me/"
+		name: "Daniel Souza",
+		email: "ola@danielsouza.com",
+		url: "https://danielsouza.com/sobre/"
 	}
 }
